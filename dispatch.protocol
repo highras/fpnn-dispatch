@@ -1,0 +1,18 @@
+===================
+	Dispatcher
+===================
+
+# addrType: ipv4, ipv6, domain. default is ipv4
+# proto: tcp, ssl, tls, udp. default is tcp
+=> which { what:%s, ?addrType:%s, ?proto:%s, ?version:%s }
+<= { endpoint:%s }
+
+=> whichall { what:%s, ?addrType:%s, ?proto:%s, ?version:%s }
+<= { endpoints:[%s] }
+
+
+
+------------------
+	Error Code
+------------------
+100001: Invalid Parameter.
